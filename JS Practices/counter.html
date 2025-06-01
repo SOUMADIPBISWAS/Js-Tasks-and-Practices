@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="Increament()">
+        Increament
+    </button>
+    <h1 id="value"></h1>
+    <button onclick="Decreament()">
+        Decreament
+    </button>
+    
+    <script>
+        let value = 0;
+        function Increament(){
+            document.getElementById("value").innerText = value++
+        }
+
+        function Decreament(){
+            if(value >= 0){
+             document.getElementById("value").innerText = value--
+            }
+        }
+        
+
+    </script>
+
+</body>
+</html>
