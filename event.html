@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        border: none;
+        padding: 10px 20px 10px 20px;
+        background-color: aqua;
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <button id="ChangeBtn" onclick="ChangeButton()">Sad 😒</button>
+
+    <select name="" id="options" onchange="ChangeValue()">
+        <option value="Car🏎️">Car</option>
+        <option value="Bike🚵🏾">Bike</option>
+        <option value="Ship🚢">Ship</option>
+    </select>
+
+    <h1 id="choose"></h1>
+
+    <textarea name="" id="" onselect="SelctValue()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, blanditiis at? Unde asperiores officiis, aliquam fuga cupiditate, quis dolorem ducimus at quo facilis quia ad. Corporis consequuntur illo ea doloremque.</textarea>
+
+    <p id="msg"></p>
+
+    <script>
+
+        function ChangeButton(){
+        let button = document.getElementById("ChangeBtn");
+        if(button.innerText == "Sad 😒"){
+        button.style.backgroundColor = "red";
+        button.style.color = "aqua";
+        button.innerText= "Happy 😁" 
+        }
+        else{
+            button.style.backgroundColor = "aqua";
+            button.style.color = "red";
+            button.innerText= "Sad 😒" 
+        }
+        }
+
+        function ChangeValue(){
+            let a = document.getElementById("options").value;
+            document.getElementById("choose").innerText = a;
+        }
+        
+        function SelctValue (){
+            document.getElementById("msg").innerText="Text Select";
+        }
+
+
+
+        
+    </script>
+</body>
+</html>
