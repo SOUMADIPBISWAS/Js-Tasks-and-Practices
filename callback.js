@@ -15,4 +15,5 @@ function mySeconcall(){
 
 test(2,3,myCall);
 test(5,10,mySeconcall);
+console.log(heelo);
 
