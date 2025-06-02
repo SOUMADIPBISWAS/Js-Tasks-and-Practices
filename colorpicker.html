@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+<style>
+    .pass{
+        border: 1px solid black;
+        width: 200px;
+        border-radius: 5px;
+    
+    }
+
+    .pass input{
+        border: none;
+        outline: none;
+    }
+
+</style>
+<body>
+    <input type="color" name="" id="color" onchange="colorChanger()">
+    <i class="bi bi-toggle2-on" onclick="darkmode()" id="toggle"></i>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae porro accusantium minus iure perspiciatis. Adipisci tempora dolores excepturi. Aspernatur eaque iure inventore labore sapiente voluptatem repudiandae dolorem hic! Dolorem aspernatur provident iure temporibus recusandae error labore aperiam odit doloremque suscipit eaque fuga voluptatem, totam a ea quas accusamus mollitia odio, modi necessitatibus distinctio molestiae minima facere. Corrupti dicta dolores voluptatum minima perspiciatis molestias non laborum nobis culpa! Doloribus dolores rerum tenetur dolorum molestiae soluta quam enim voluptate consequuntur molestias blanditiis voluptatibus libero consectetur illum, magni beatae deserunt maxime est expedita repellendus hic id culpa cupiditate aut? Laborum consequuntur blanditiis repellat voluptate veniam dignissimos voluptatum cumque illum distinctio excepturi, dolores suscipit quo, alias quos in facere earum nobis, delectus ex. Perspiciatis 
+    </p>
+
+    <div class="pass"><input type="password" name="" id="pass"><i class="bi bi-eye" onclick="password()" id="show"></i></div>
+
+    <script>
+
+        function colorChanger(){
+            let color = document.getElementById("color").value;
+            document.body.style.backgroundColor = color;
+        }
+
+        function darkmode(){
+            let bgColor = document.body.style.backgroundColor;
+            if(bgColor === "" || bgColor === "white"){
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                document.getElementById("toggle").attributes[0].value="bi bi-toggle2-on";
+            }
+            else{
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                document.getElementById("toggle").attributes[0].value="bi bi-toggle2-off";
+            }
+            
+        }
+
+        function password(){
+            let password = document.getElementById("pass");
+            if(password.type==="password"){
+                password.type="text";
+                document.getElementById("show").attributes[0].value="bi bi-eye-slash";
+            }
+            else{
+                password.type="password";
+                document.getElementById("show").attributes[0].value="bi bi-eye";
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

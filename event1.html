@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        border: none;
+        padding: 20px;
+        border-radius: 100%;
+        font-size: 25px;
+    }
+
+</style>
+<body>
+    <!-- <button id="btn">Devanshu</button> -->
+
+    <button id="btn">😒</button>
+
+    <script>
+        // document.getElementById("btn").addEventListener("click",()=>{
+        //     document.getElementById("btn").innerText="Manny";
+        // })
+
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click",()=>{
+            btn.style.backgroundColor = "green";
+        })
+        
+        btn.addEventListener("mouseenter",()=>{
+            btn.innerText="😁"
+        })
+
+        btn.addEventListener("mouseleave",()=>{
+            btn.innerText="😞"
+        })
+    </script>
+</body>
+</html>
